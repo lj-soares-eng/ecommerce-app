@@ -1,0 +1,20 @@
+{
+  "name": "ecommerce-app",
+  "private": true,
+  "description": "E-commerce monorepo: NestJS (Fastify), React, Bun dashboards, PostgreSQL, Redis",
+  "scripts": {
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:dashboard": "bun run --cwd apps/dashboard-ws dev",
+    "dev:notifications": "bun run --cwd apps/notifications-ws dev",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
