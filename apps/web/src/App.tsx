@@ -3,6 +3,9 @@ import NavBar from './components/NavBar';
 import BannerCarousel from './components/BannerCarousel';
 import HomeSections from './components/HomeSections';
 import ProductCarousel from './components/ProductCarousel';
+import PromoBanners from './components/PromoBanners';
+import FavoritesCarousel from './components/FavoritesCarousel';
+import DealAndOffers from './components/DealAndOffers';
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <BannerCarousel />
       <HomeSections />
       <ProductCarousel />
+      <PromoBanners />
+      <FavoritesCarousel />
+      <DealAndOffers />
     </div>
   );
 }
