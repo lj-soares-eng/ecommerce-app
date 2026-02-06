@@ -7,6 +7,7 @@ import { Favorite } from './entities/favorite.entity';
 import { CartItem } from './entities/cart-item.entity';
 import { Order } from './entities/order.entity';
 import { OrderItem } from './entities/order-item.entity';
+import { Admin } from './entities/admin.entity';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { OrderItem } from './entities/order-item.entity';
         CartItem,
         Order,
         OrderItem,
+        Admin,
       ],
       synchronize: true,
     }),
