@@ -2,7 +2,7 @@ function NavBar() {
   return (
     <nav className="flex items-center justify-center border-b border-amber-700/20 bg-[#FFE600]">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-6 px-4 py-2">
-        {/* Left: Address */}
+        {/* Left: Address / CEP */}
         <div className="flex shrink-0 items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -12,13 +12,23 @@ function NavBar() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="h-5 w-5 text-gray-800"
+            className="h-5 w-5 shrink-0 text-gray-800"
           >
             <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
             <circle cx="12" cy="10" r="3" />
           </svg>
-          <div className="flex flex-col leading-tight">
-            <span className="text-sm font-medium text-gray-800">Address</span>
+          <div className="flex flex-col">
+            <label htmlFor="nav-cep" className="text-xs text-gray-600">
+              Enter your ZIP code
+            </label>
+            <input
+              id="nav-cep"
+              type="text"
+              placeholder="00000"
+              maxLength={9}
+              className="w-24 rounded border border-gray-300 bg-white px-2 py-0.5 text-sm text-gray-900 placeholder:text-gray-400 focus:border-amber-600 focus:outline-none focus:ring-1 focus:ring-amber-600"
+              aria-label="Enter your ZIP code for shipping costs"
+            />
           </div>
         </div>
 
